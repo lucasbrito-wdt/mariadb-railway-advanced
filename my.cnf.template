@@ -1,5 +1,5 @@
 [mysqld]
-# Configurações de rede
+# Rede
 port = 3306
 bind-address = 0.0.0.0
 
@@ -7,8 +7,8 @@ bind-address = 0.0.0.0
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
 
-# InnoDB otimizado
-innodb_buffer_pool_size = 512M  # Será sobrescrito pelo entrypoint dinamicamente
+# InnoDB (valores padrão, serão ajustados dinamicamente)
+innodb_buffer_pool_size = {{BUFFER_POOL_SIZE}}
 innodb_log_file_size = 128M
 innodb_flush_log_at_trx_commit = 1
 innodb_file_per_table = 1
